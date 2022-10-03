@@ -24,7 +24,6 @@ public static class MauiProgram
 		builder.Services.AddSingleton<MainPage>();
 		builder.Services.AddSingleton<MainViewModel>();
 
-
 #if WINDOWS
             builder.ConfigureLifecycleEvents(events =>
             {
@@ -38,6 +37,7 @@ public static class MauiProgram
                         manager.PersistenceId = "MainWindowPersistanceId";
                         manager.MinWidth = 360;
                         manager.MinHeight = 480;
+                        
                     });
                 });
             });

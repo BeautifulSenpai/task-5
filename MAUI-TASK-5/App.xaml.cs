@@ -8,4 +8,15 @@ public partial class App : Application
 
 		MainPage = new AppShell();
 	}
+
+    protected override Window CreateWindow(IActivationState activationState)
+    {
+        var window = base.CreateWindow(activationState);
+        if (window != null)
+        {
+            window.Title = "Calculator";
+            
+        }
+        return window;
+    }
 }
